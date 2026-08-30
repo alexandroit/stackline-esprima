@@ -12,3 +12,6 @@
 - Never publish until upstream, differential, hostile input, stress, browser,
   CLI, TypeScript 3.9/current, clean pack-install, npm tree, and audit gates pass.
 - Preserve the upstream BSD-2-Clause attribution in every distribution.
+- TypeScript 5.9.3 is intentional: TypeScript 7 removed the ES5 target needed
+  by the Node.js 8 compatibility build. Dependabot ignores TypeScript 6+ until
+  that runtime contract can be preserved by a validated build path.
