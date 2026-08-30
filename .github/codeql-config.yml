@@ -1,0 +1,7 @@
+name: Stackline Esprima CodeQL configuration
+
+paths-ignore:
+  # Immutable historical libraries are parser regression input, not package code.
+  - test/3rdparty/**
+  # The retired upstream browser runner references historical CDN test tools.
+  - test/runner.html

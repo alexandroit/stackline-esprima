@@ -18,6 +18,12 @@ Version 1.0.0 has no production, optional, or peer dependencies. Release gates
 require a warning-free packed install, a valid npm tree, and zero production
 and full-lockfile audit findings.
 
+CodeQL scans the parser, build, package scripts, maintained tests, and docs.
+Immutable historical JavaScript libraries under `test/3rdparty` are parser
+regression inputs and are not shipped or executed by consumers; they are
+excluded from CodeQL source analysis so vulnerabilities in those archived
+fixtures are not misreported as package runtime findings.
+
 ## Untrusted input
 
 The parser does not execute parsed source. Parsing still consumes CPU and
