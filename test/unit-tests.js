@@ -30,7 +30,6 @@ var esprima = require('../'),
     errorToObject = require('./utils/error-to-object'),
     fs = require('fs'),
     path = require('path'),
-    diff = require('json-diff').diffString,
     total = 0,
     result,
     failures = [],
@@ -111,9 +110,8 @@ if (failures.length) {
             actualObject = JSON.parse(failure.actual);
 
             console.error(failure.source + ': Expected\n    ' +
-                failure.expected.split('\n').join('\n    ') +
-                '\nto match\n    ' + failure.actual + '\nDiff:\n' +
-                diff(expectedObject, actualObject));
+                JSON.stringify(expectedObject, null, 4).split('\n').join('\n    ') +
+                '\nto match\n    ' + JSON.stringify(actualObject, null, 4));
         } catch (ex) {
             console.error(failure.source + ': Expected\n    ' +
                 failure.expected.split('\n').join('\n    ') +

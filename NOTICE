@@ -1,0 +1,11 @@
+@stackline/esprima is an independent maintained continuation of Esprima 4.0.1.
+It is not affiliated with or endorsed by the JS Foundation, OpenJS Foundation,
+jQuery, Ariya Hidayat, or the upstream Esprima project.
+
+The parser implementation, fixtures, tests, command-line tools, and historical
+documentation derive from the BSD-2-Clause Esprima project.
+
+Copyright JS Foundation and other contributors, https://js.foundation/
+
+See LICENSE for the complete terms and THIRD_PARTY_LICENSES.md for the shipped
+production dependency inventory.

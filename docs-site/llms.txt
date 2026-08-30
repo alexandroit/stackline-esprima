@@ -1,0 +1,23 @@
+# @stackline/esprima
+
+Canonical documentation: https://alexandro.net/docs/vanilla/esprima/
+Repository: https://github.com/alexandroit/stackline-esprima
+npm: https://www.npmjs.com/package/@stackline/esprima
+License: BSD-2-Clause
+
+Current public release: 1.0.0
+Compatibility target: esprima@4.0.1
+Runtime dependencies: none
+Runtime support: Node.js 8 or newer and direct browser loading
+Type support: first-party declarations validated with TypeScript 3.9 and current
+
+Public API:
+- parse(code, options, delegate)
+- parseScript(code, options, delegate)
+- parseModule(code, options, delegate)
+- tokenize(code, options, delegate)
+- Syntax
+- version (compatibility value 4.0.1)
+
+Grammar scope: ECMAScript 2017 with experimental JSX, matching Esprima 4.0.1.
+The Stackline package version is independent from the preserved API version.

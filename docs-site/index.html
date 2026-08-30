@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>@stackline/esprima | Esprima 4 compatible parser</title>
+  <meta name="description" content="A maintained Esprima 4 compatible JavaScript and JSX parser with zero runtime dependencies, first-party types, and a live AST playground.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://alexandro.net/docs/vanilla/esprima/">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "@stackline/esprima",
+    "codeRepository": "https://github.com/alexandroit/stackline-esprima",
+    "programmingLanguage": "JavaScript",
+    "runtimePlatform": "Node.js and web browsers",
+    "license": "https://opensource.org/license/bsd-2-clause",
+    "version": "1.0.0"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="https://alexandro.net/">Alexandro.Net</a>
+    <nav aria-label="Project links">
+      <a href="https://www.npmjs.com/package/@stackline/esprima">npm</a>
+      <a href="https://github.com/alexandroit/stackline-esprima">GitHub</a>
+      <a href="./SECURITY.md">Security</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">DEPENDENCY-FREE ECMASCRIPT PARSER</p>
+      <h1 id="page-title">@stackline/esprima</h1>
+      <p class="lede">The Esprima 4.0.1 parsing contract, maintained as a reproducible package with clean installs and first-party TypeScript declarations.</p>
+      <div class="release-facts" aria-label="Release facts">
+        <span><strong>1.0.0</strong> package</span>
+        <span><strong>4.0.1</strong> API target</span>
+        <span><strong>0</strong> runtime dependencies</span>
+        <span><strong>Node 8+</strong> runtime</span>
+      </div>
+      <pre class="install"><code>npm install @stackline/esprima</code></pre>
+    </section>
+
+    <section class="playground" aria-labelledby="playground-title">
+      <div class="tool-heading">
+        <div>
+          <p class="eyebrow">LIVE PACKAGE</p>
+          <h2 id="playground-title">AST playground</h2>
+        </div>
+        <select id="example-select" aria-label="Source example">
+          <option value="script">Script</option>
+          <option value="module">Module</option>
+          <option value="jsx">JSX</option>
+          <option value="tokens">Tokenizer</option>
+        </select>
+      </div>
+
+      <form id="parser-form">
+        <fieldset class="mode-control">
+          <legend>Mode</legend>
+          <label><input type="radio" name="mode" value="script" checked> Script</label>
+          <label><input type="radio" name="mode" value="module"> Module</label>
+          <label><input type="radio" name="mode" value="tokens"> Tokens</label>
+        </fieldset>
+        <div class="option-control">
+          <label><input id="jsx-option" type="checkbox"> JSX</label>
+          <label><input id="range-option" type="checkbox" checked> Ranges</label>
+          <label><input id="location-option" type="checkbox"> Locations</label>
+        </div>
+        <button type="submit">Analyze source</button>
+      </form>
+
+      <div class="editor-grid">
+        <div class="editor-pane">
+          <label for="source-input">Source</label>
+          <textarea id="source-input" spellcheck="false">const answer = (value = 40) => value + 2;</textarea>
+        </div>
+        <div class="editor-pane">
+          <div class="output-label">
+            <label for="result-output">Result</label>
+            <span id="status" role="status">Ready</span>
+          </div>
+          <pre id="result-output" tabindex="0"></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="reference" aria-labelledby="reference-title">
+      <h2 id="reference-title">Public API</h2>
+      <div class="api-grid">
+        <article><code>parseScript(code, options, delegate)</code><p>Parse ECMAScript source as a script.</p></article>
+        <article><code>parseModule(code, options, delegate)</code><p>Parse source with module grammar.</p></article>
+        <article><code>parse(code, options, delegate)</code><p>Preserved historical entry point.</p></article>
+        <article><code>tokenize(code, options, delegate)</code><p>Return lexical tokens without building an AST.</p></article>
+      </div>
+      <p class="scope-note"><strong>Grammar scope:</strong> ECMAScript 2017 plus experimental JSX, matching Esprima 4.0.1. Modern syntax outside that contract is intentionally not accepted.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>BSD-2-Clause</span>
+    <a href="./MIGRATION.md">Migration</a>
+    <a href="./COMPATIBILITY_CONTRACT.md">Compatibility contract</a>
+    <a href="./THIRD_PARTY_LICENSES.md">Attribution</a>
+  </footer>
+
+  <script src="./esprima.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

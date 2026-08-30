@@ -27,7 +27,6 @@
 'use strict';
 
 var fs = require('fs'),
-    glob = require("glob"),
     path = require('path'),
     fixturePath = 'test/fixtures',
     fixtureDist = 'test/dist';
@@ -59,7 +58,7 @@ function renderFixturesFile(ext, stringify) {
         return content;
     }
 
-    fixtureFilePaths = glob.sync(path.join(__dirname, '../' + fixturePath + '/**/*.' + ext));
+    fixtureFilePaths = walk(path.join(__dirname, '../' + fixturePath), ext);
     fixtures = fixtureFilePaths.map(renderFixture).join('\n');
     content = templateFixtureFile(fixtures);
 
@@ -67,6 +66,20 @@ function renderFixturesFile(ext, stringify) {
     fs.writeFileSync(fixtureDistPath, content);
 
     console.log('built', fixtureDistPath);
+}
+
+function walk(directory, ext) {
+    var result = [];
+    fs.readdirSync(directory).sort().forEach(function (entry) {
+        var fullPath = path.join(directory, entry);
+        var stat = fs.statSync(fullPath);
+        if (stat.isDirectory()) {
+            result = result.concat(walk(fullPath, ext));
+        } else if (entry.slice(-(ext.length + 1)) === '.' + ext) {
+            result.push(fullPath);
+        }
+    });
+    return result;
 }
 
 renderFixturesFile('js', true);
