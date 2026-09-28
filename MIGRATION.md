@@ -19,7 +19,7 @@ For a deterministic application lockfile, pin the Stackline version exactly:
 ```json
 {
   "dependencies": {
-    "esprima": "npm:@stackline/esprima@1.0.0"
+    "esprima": "npm:@stackline/esprima@1.0.1"
   }
 }
 ```
@@ -40,7 +40,7 @@ const esprima = require('@stackline/esprima')
 
 The npm package version and compatibility API value serve different purposes:
 
-- package release: `@stackline/esprima@1.0.0`;
+- package release: `@stackline/esprima@1.0.1`;
 - preserved API value: `esprima.version === '4.0.1'`.
 
 Code that checks the historical API value continues to work.
