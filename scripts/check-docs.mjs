@@ -22,7 +22,7 @@ assert.match(html, /id="result-output"/);
 
 const metadata = JSON.parse(await readFile('site-dist/package-meta.json', 'utf8'));
 assert.equal(metadata.name, '@stackline/esprima');
-assert.equal(metadata.version, '1.0.0');
+assert.equal(metadata.version, '1.0.1');
 assert.equal(metadata.runtimeDependencies, 0);
 
 process.stdout.write('documentation artifact verified\n');

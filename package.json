@@ -1,6 +1,6 @@
 {
   "name": "@stackline/esprima",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compatibility-first maintained Esprima 4 parser with a dependency-free runtime, reproducible build, and first-party types",
   "type": "commonjs",
   "main": "./dist/esprima.js",
@@ -69,7 +69,8 @@
     "syntax",
     "jsx",
     "typescript",
-    "stackline"
+    "stackline",
+    "estree"
   ],
   "author": "Stackline Maintainers",
   "contributors": [

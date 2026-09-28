@@ -41,7 +41,7 @@ try {
     path.join(consumer, 'node_modules/@stackline/esprima/package.json'),
     'utf8'
   ));
-  assert.equal(installed.version, '1.0.0');
+  assert.equal(installed.version, '1.0.1');
   assert.equal(installed.dependencies, undefined);
 } finally {
   await rm(root, { recursive: true, force: true });
