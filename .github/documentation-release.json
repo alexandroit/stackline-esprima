@@ -4,7 +4,7 @@
     {
       "name": "@stackline/esprima",
       "path": "README.md",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "baselineVersion": "1.0.1",
       "keywords": [
         "stackline",
@@ -23,8 +23,8 @@
       "homepage": "https://alexandro.net/docs/vanilla/esprima/",
       "baselineTarball": "https://registry.npmjs.org/@stackline/esprima/-/esprima-1.0.1.tgz",
       "baselineIntegrity": "sha512-XS/rs5X6InbtvxYoJ6fynQBMsbKEdfRffhlnYz1eGvG43NQQna632fxntHSQq/702aRDXC69kEu2dE3FQGWjpw==",
-      "expectedSha512": "5f3be809936e4243b754c79d235eea092e0832eab5658053d02a2d115019df7a1f6f5002cacb60555874daa155d142bdbf0727a850d0260215331de3ad60965f",
-      "tag": "docs-stackline-esprima-v1.0.2"
+      "expectedSha512": "be05415fed64a0054bdcb83c0a56e787810dc3d66cae39d8719c3f64957405433896f9400026a904974bd679a168ab51624c148b63b82c251de46991ab617a66",
+      "tag": "docs-stackline-esprima-v1.0.3"
     }
   ]
 }
