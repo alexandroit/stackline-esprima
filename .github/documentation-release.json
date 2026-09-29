@@ -1,0 +1,30 @@
+{
+  "repository": "alexandroit/stackline-esprima",
+  "packages": [
+    {
+      "name": "@stackline/esprima",
+      "path": "README.md",
+      "version": "1.0.2",
+      "baselineVersion": "1.0.1",
+      "keywords": [
+        "stackline",
+        "npm-package",
+        "esprima",
+        "parser",
+        "typescript",
+        "nodejs",
+        "ast",
+        "ecmascript",
+        "javascript",
+        "syntax",
+        "jsx",
+        "estree"
+      ],
+      "homepage": "https://alexandro.net/docs/vanilla/esprima/",
+      "baselineTarball": "https://registry.npmjs.org/@stackline/esprima/-/esprima-1.0.1.tgz",
+      "baselineIntegrity": "sha512-XS/rs5X6InbtvxYoJ6fynQBMsbKEdfRffhlnYz1eGvG43NQQna632fxntHSQq/702aRDXC69kEu2dE3FQGWjpw==",
+      "expectedSha512": "5f3be809936e4243b754c79d235eea092e0832eab5658053d02a2d115019df7a1f6f5002cacb60555874daa155d142bdbf0727a850d0260215331de3ad60965f",
+      "tag": "docs-stackline-esprima-v1.0.2"
+    }
+  ]
+}
