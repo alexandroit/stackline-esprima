@@ -4,13 +4,13 @@
 
 [![npm version](https://img.shields.io/npm/v/@stackline/esprima.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/esprima)
 [![license](https://img.shields.io/npm/l/@stackline/esprima.svg?style=flat-square)](https://github.com/alexandroit/stackline-esprima)
-[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-esprima-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-esprima)
+[![GitHub repository](https://img.shields.io/badge/GitHub-repository-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-esprima)
 [![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/esprima/)
 [![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
 
 **[Documentation](https://alexandro.net/docs/vanilla/esprima/)** | **[npm](https://www.npmjs.com/package/@stackline/esprima)** | **[Issues](https://github.com/alexandroit/stackline-esprima/issues)** | **[Repository](https://github.com/alexandroit/stackline-esprima)**
 
-**Current package version:** `1.0.2`
+**Current package version:** `1.0.3`
 
 ---
 
@@ -30,7 +30,7 @@ Esprima project.
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/esprima@1.0.2` |
+| Package | `@stackline/esprima@1.0.3` |
 | Node.js runtime | `>=8` |
 | CommonJS / primary entry | `./dist/esprima.js` |
 | Type declarations | `./index.d.ts` |
