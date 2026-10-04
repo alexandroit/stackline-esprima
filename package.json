@@ -87,7 +87,7 @@
     "@arethetypeswrong/cli": "0.18.5",
     "esbuild": "0.28.2",
     "esprima-baseline": "npm:esprima@4.0.1",
-    "publint": "0.3.24",
+    "publint": "0.3.25",
     "typescript": "5.9.3",
     "typescript-3-9": "npm:typescript@3.9.10"
   }
