@@ -4,6 +4,8 @@ import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 
+const manifest = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'));
+
 const root = await mkdtemp(path.join(os.tmpdir(), 'stackline-esprima-smoke-'));
 const artifactDirectory = path.join(root, 'artifact');
 const consumer = path.join(root, 'consumer');
@@ -41,7 +43,7 @@ try {
     path.join(consumer, 'node_modules/@stackline/esprima/package.json'),
     'utf8'
   ));
-  assert.equal(installed.version, '1.0.1');
+  assert.equal(installed.version, manifest.version);
   assert.equal(installed.dependencies, undefined);
 } finally {
   await rm(root, { recursive: true, force: true });

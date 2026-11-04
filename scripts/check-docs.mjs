@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import { access, readFile } from 'node:fs/promises';
 
+const manifest = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'));
+
 for (const file of [
   'site-dist/index.html',
   'site-dist/styles.css',
@@ -22,7 +24,7 @@ assert.match(html, /id="result-output"/);
 
 const metadata = JSON.parse(await readFile('site-dist/package-meta.json', 'utf8'));
 assert.equal(metadata.name, '@stackline/esprima');
-assert.equal(metadata.version, '1.0.1');
+assert.equal(metadata.version, manifest.version);
 assert.equal(metadata.runtimeDependencies, 0);
 
 process.stdout.write('documentation artifact verified\n');
